@@ -57,7 +57,8 @@ dependencies:
   #Cached image
   cached_network_image:
 
-
+  #Http req and res
+  dio:
 
 dev_dependencies:
   flutter_test:
