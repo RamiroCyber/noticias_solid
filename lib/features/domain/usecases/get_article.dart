@@ -5,7 +5,7 @@ import '../entities/article.dart';
 
 class GetArticleUseCase implements UseCase<DataState<List<ArticleEntity>>, void> {
 
-  late final ArticleRepository _articleRepository;
+  final ArticleRepository _articleRepository;
 
   GetArticleUseCase(this._articleRepository);
   @override
