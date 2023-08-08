@@ -6,14 +6,14 @@ import 'package:flutter_solid/features/presentation/pages/home/daile_news.dart';
 import 'package:flutter_solid/injection.dart';
 import 'config/theme/app_themes.dart';
 
-void main() {
-  initializeDependencies();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDependencies();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-

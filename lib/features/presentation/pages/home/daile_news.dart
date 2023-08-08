@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_solid/features/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:flutter_solid/features/presentation/bloc/article/remote/remote_article_state.dart';
+import 'package:flutter_solid/features/presentation/widgets/article_content.dart';
 
 class DailyNews extends StatelessWidget {
   const DailyNews({super.key});
@@ -36,8 +37,8 @@ class DailyNews extends StatelessWidget {
           return ListView.builder(
               itemCount: state.articles!.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text("$index"),
+                return ArticleWidget(
+                  article: state.articles![index],
                 );
               });
         }
