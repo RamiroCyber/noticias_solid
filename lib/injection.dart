@@ -18,7 +18,7 @@ Future<void> initializeDependencies() async {
 
   getIt.registerSingleton<NewsApiService>(NewsApiService(getIt()));
 
-  getIt.registerSingleton<ArticleRepository>(ArticleRepositoryImpl(getIt()));
+  getIt.registerSingleton<ArticleRepository>(ArticleRepositoryImpl(getIt(),getIt()));
 
   getIt.registerSingleton<GetArticleUseCase>(GetArticleUseCase(getIt()));
 
